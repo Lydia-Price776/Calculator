@@ -22,7 +22,9 @@ function calculate(event) {
             display.value = display.value.slice(0, display.value.length - 1);
             break;
         case '=':
-           display.value = eval(display.value);
+            if (display.value !== ''){
+                display.value = eval(display.value);
+            }
             break;
         default:
             display.value += clickedButtonValue;
